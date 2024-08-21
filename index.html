@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Waitlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="waitlist-container">
+        <h2>Join the Waitlist</h2>
+        <form id="waitlistForm">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Join Waitlist</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Load Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBTdcvhHwltY4vYmJDIsrG0fcwhv7L97T4",
+        authDomain: "waitlistemails.firebaseapp.com",
+        databaseURL: "https://waitlistemails-default-rtdb.firebaseio.com",
+        projectId: "waitlistemails",
+        storageBucket: "waitlistemails.appspot.com",
+        messagingSenderId: "9580268552",
+        appId: "1:9580268552:web:9f6db1185dab3b84e195bd",
+        measurementId: "G-BQD4KP2G42"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+
+      window.addEmailToWaitlist = function(email) {
+        const emailRef = ref(database, 'emails/' + Date.now());
+        set(emailRef, {
+          email: email
+        }).then(() => {
+          console.log("Email successfully written to database.");
+        }).catch((error) => {
+          console.error("Error writing email to database: ", error);
+        });
+      }
+    </script>
+
+    <!-- Load your script -->
+    <script src="script.js"></script>
+</body>
+</html>
