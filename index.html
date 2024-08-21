@@ -25,19 +25,20 @@
       import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
 
       const firebaseConfig = {
-        apiKey: "AIzaSyBTdcvhHwltY4vYmJDIsrG0fcwhv7L97T4",
-        authDomain: "waitlistemails.firebaseapp.com",
-        databaseURL: "https://waitlistemails-default-rtdb.firebaseio.com",
-        projectId: "waitlistemails",
-        storageBucket: "waitlistemails.appspot.com",
-        messagingSenderId: "9580268552",
-        appId: "1:9580268552:web:9f6db1185dab3b84e195bd",
-        measurementId: "G-BQD4KP2G42"
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        databaseURL: "YOUR_DATABASE_URL",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID"
       };
 
       const app = initializeApp(firebaseConfig);
       const database = getDatabase(app);
 
+     // Replace these placeholders with your Firebase project configuration
       window.addEmailToWaitlist = function(email) {
         const emailRef = ref(database, 'emails/' + Date.now());
         set(emailRef, {
