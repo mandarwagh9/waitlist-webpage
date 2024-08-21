@@ -6,6 +6,7 @@ This project allows users to join a waitlist by entering their email addresses. 
 
 - [Features](#features)
 - [Prerequisites](#prerequisites)
+- [Demo](#Demo)
 - [Setup](#setup)
 - [Running the Project](#running-the-project)
 - [Firebase Configuration](#firebase-configuration)
@@ -25,6 +26,9 @@ Ensure you have the following before setting up the project:
 
 - A web browser.
 - Internet connection for loading Firebase SDK and jQuery.
+
+## Demo
+[!(demo)](https://github.com/mandarwagh9/waitlist-webpage/blob/main/0821(2).gif?raw=true)
 
 ## Setup
 
