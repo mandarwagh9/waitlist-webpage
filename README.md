@@ -28,7 +28,7 @@ Ensure you have the following before setting up the project:
 - Internet connection for loading Firebase SDK and jQuery.
 
 ## Demo
-[!(demo)](https://github.com/mandarwagh9/waitlist-webpage/blob/main/0821(2).gif?raw=true)
+![demo](https://github.com/mandarwagh9/waitlist-webpage/blob/main/0821(2).gif?raw=true)
 
 ## Setup
 
